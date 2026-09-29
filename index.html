@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>TC Billing Trainer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body><main>
+<h1>TC Billing Trainer</h1><p class="s" id="sub"></p>
+<nav role="tablist"><button role="tab" data-t="learn" aria-selected="true">Learn</button><button role="tab" data-t="prac" aria-selected="false">Practice</button><button role="tab" data-t="bill" aria-selected="false">Billing</button></nav>
+
+<section id="learn">
+<div class="row"><input id="q" type="search" placeholder="Type food name or code" aria-label="Search food by name or code"><select id="sort" aria-label="Order"><option value="code">Order: code 1 to 603</option><option value="az">Order: A to Z</option><option value="cat">Order: by category</option></select><select id="cat" aria-label="Category"></select><select id="hide" aria-label="Cover"><option value="">Show everything</option><option value="name">Cover names (guess the name)</option><option value="code">Cover codes (guess the code)</option></select></div>
+<p class="s" id="hint"></p><div class="box wrap"><table><tbody id="rows"></tbody></table></div></section>
+
+<section id="prac" hidden>
+<div class="row"><select id="mode" aria-label="Mode"><option value="name">See code, type the name (spelling)</option><option value="code">See name, type the code</option><option value="mcq">See code, pick the name</option></select><select id="pcat" aria-label="Practice category"></select></div>
+<div class="st"><span>Correct <b id="sok">0</b>/<b id="sn">0</b></span><span>Streak <b id="sst">0</b></span></div>
+<div class="box"><div id="card"></div><div class="fb" id="fb" aria-live="polite"></div></div></section>
+
+<section id="bill" hidden>
+<div class="box"><b>Order practice</b><p class="s" id="ord">Press the button to get a customer order, then enter the codes below.</p>
+<button class="btn o" id="gen">New order</button> <button class="btn" id="chk">Check my bill</button><div class="fb" id="bfb" aria-live="polite"></div></div>
+<div class="row"><input id="bc" inputmode="numeric" placeholder="Item code" aria-label="Item code"><input id="bq" type="number" min="1" value="1" aria-label="Quantity"><button class="btn" id="add">Add item</button></div>
+<div class="row"><input id="bn" type="search" placeholder="Or type food name to find it" aria-label="Find food by name" autocomplete="off"></div><div id="bs"></div><div id="pk"></div><div class="box"><div class="wrap"><table><tbody id="bl"></tbody></table></div><div class="tot" id="tot">₹0</div><button class="btn o" id="clr">Clear bill</button></div></section>
+
+</main><script src="script.js"></script></body></html>
