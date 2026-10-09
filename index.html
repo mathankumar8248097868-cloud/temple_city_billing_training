@@ -3,7 +3,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css"></head><body><main>
 <h1>TC Billing Trainer</h1><p class="s" id="sub"></p>
-<nav role="tablist"><button role="tab" data-t="learn" aria-selected="true">Learn</button><button role="tab" data-t="prac" aria-selected="false">Practice</button><button role="tab" data-t="bill" aria-selected="false">Billing</button></nav>
+<nav role="tablist"><button role="tab" data-t="learn" aria-selected="true">Learn</button><button role="tab" data-t="prac" aria-selected="false">Practice</button><button role="tab" data-t="bill" aria-selected="false">Billing</button><button role="tab" data-t="items" aria-selected="false">Items</button></nav>
 
 <section id="learn">
 <div class="row"><input id="q" type="search" placeholder="Type food name or code" aria-label="Search food by name or code"><select id="sort" aria-label="Order"><option value="code">Order: code 1 to 603</option><option value="az">Order: A to Z</option><option value="cat">Order: by category</option></select><select id="cat" aria-label="Category"></select><select id="hide" aria-label="Cover"><option value="">Show everything</option><option value="name">Cover names (guess the name)</option><option value="code">Cover codes (guess the code)</option></select></div>
@@ -19,5 +19,16 @@
 <button class="btn o" id="gen">New order</button> <button class="btn" id="chk">Check my bill</button><div class="fb" id="bfb" aria-live="polite"></div></div>
 <div class="row"><input id="bc" inputmode="numeric" placeholder="Item code" aria-label="Item code"><input id="bq" type="number" min="1" value="1" aria-label="Quantity"><button class="btn" id="add">Add item</button></div>
 <div class="row"><input id="bn" type="search" placeholder="Or type food name to find it" aria-label="Find food by name" autocomplete="off"></div><div id="bs"></div><div id="pk"></div><div class="box"><div class="wrap"><table><tbody id="bl"></tbody></table></div><div class="tot" id="tot">₹0</div><button class="btn o" id="clr">Clear bill</button></div></section>
+
+<section id="items" hidden>
+<div class="box"><b id="mt">Add new item</b>
+<div class="row" style="margin-top:10px"><input id="fc" type="number" min="1" inputmode="numeric" placeholder="Code" aria-label="Item code"><input id="fn" placeholder="Item name" aria-label="Item name" style="flex:3 1 200px"></div>
+<div class="row"><input id="fp" type="number" min="0" inputmode="numeric" placeholder="Price (empty = price on request)" aria-label="Price in rupees"><input id="fg" list="dl" placeholder="Category" aria-label="Category"><datalist id="dl"></datalist></div>
+<button class="btn" id="msave">Add item</button> <button class="btn o" id="mcancel" hidden>Cancel</button>
+<div class="fb" id="mf" aria-live="polite"></div></div>
+<div class="row"><input id="mq" type="search" placeholder="Search item to edit or delete (name or code)" aria-label="Search items"></div>
+<p class="s" id="mh"></p><div class="box wrap"><table><tbody id="ml"></tbody></table></div>
+<button class="btn o" id="mreset">Reset menu to original</button>
+</section>
 
 </main><script src="script.js"></script></body></html>

@@ -23,3 +23,4 @@ td.c{font-weight:800;color:var(--g);width:64px;font-variant-numeric:tabular-nums
 .opt{display:block;width:100%;text-align:left;margin:6px 0;background:var(--sf);color:var(--ink);border:1.5px solid var(--ln)}
 .tot{font-size:28px;font-weight:800;text-align:right}
 @media(prefers-reduced-motion:no-preference){.fb{transition:color .2s}}
+button.dl{color:var(--r);border-color:var(--r)}td.r .btn{padding:6px 10px;font-size:14px}
